@@ -4,12 +4,13 @@
   margin: 0 auto;
   padding: 0;
 }
-
+//from .. estado que ele está .. to .. estado que ele vai
 @keyframes appear {
-  from {
+  0% {
+    transform: translate(-100%);
   }
-
-  to {
+  100%{
+    transform: translate(0);
   }
 }
 
@@ -23,11 +24,11 @@ main {
   flex-direction: column;
 
 .header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 100%;
-    padding: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+   max-width: 100%;
+  padding: 23px;
    }
 
 .menu-options {
@@ -54,6 +55,10 @@ button {
           font-weight: 700;
           font-size: 15px;
           background-color: transparent;
+          overflow: hidden;
+          position: relative;
+
+      
 
         div {
           display: flex;
@@ -69,21 +74,34 @@ button {
           .btn-face-white {
               color: rgb(51, 51, 51);
               background: white; 
+              z-index: 998;
+           
           }
 
           .btn-face-purple {
               color: rgb(243, 243, 243);
-              background: rgb(206, 11, 164);
+              background: linear-gradient(180deg, #1ea483 0%, #7465d4 100%);
               display: none;
+              z-index: 999;
+              position: absolute;
+              top: 0;
+            
+           
+              // animation: appear 200ms linear 100ms forwards;
+              
           }
 
                 &:hover {
 
-                  .btn-face-white {
-                    display: none;
-                  }
+                  // .btn-face-white {
+                  //   display: none;
+                   
+                  // }
                   .btn-face-purple {
                     display: flex;
+                    z-index: 998;
+                   
+                    animation: appear 200ms linear 100ms forwards;
                   }
                 }
        }
