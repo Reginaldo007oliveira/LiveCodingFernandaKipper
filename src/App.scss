@@ -17,6 +17,33 @@ main {
   justify-content: center;
   flex-direction: column;
 
+   .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   }
+   .logo-container {
+     
+    .logo-text {
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      flex-direction: column;
+     }
+
+    .logo-text-bold {
+      font-weight: 800;
+      font-size: 32px;
+    }
+
+    .logo-text-regular {
+      font-weight: 400;
+      font-size: 25px;
+    }
+    
+   }
+
+
   h1 {
     color: $color-primary;
   }
