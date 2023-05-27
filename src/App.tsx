@@ -8,9 +8,9 @@ function App() {
       <header className='header-container'>
          <Logo />
          <nav className='menu-options'>
-          <a href="">Texto 1</a>
-          <a href="">Texto 2</a>
-          <a href="">Texto 3</a>
+          <a href="#">Texto 1</a>
+          <a href="#">Texto 2</a>
+          <a href="#">Texto 3</a>
          </nav>
 
        <button>
@@ -24,6 +24,7 @@ function App() {
              </div>       
         </button>
       </header>
+      <div className="content-content"></div>
     </main>
   )
 }
