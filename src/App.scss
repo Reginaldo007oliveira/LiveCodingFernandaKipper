@@ -5,6 +5,14 @@
   padding: 0;
 }
 
+@keyframes appear {
+  from {
+  }
+
+  to {
+  }
+}
+
 main {
   min-height: 100vh;
   width: 100vw;
@@ -14,7 +22,7 @@ main {
 
   flex-direction: column;
 
-   .header-container {
+.header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,29 +47,45 @@ main {
     }
   }
 }
+
 button {
-  border-radius: 999px;
-  border: none;
-  padding: 18px;
-  color: rgb(13, 15, 8);
-  font-weight: 700;
- font-size: 15px;
- display: flex;
-justify-content: center;
-align-items: flex-end;
+          border-radius: 999px;
+          border: none;
+          font-weight: 700;
+          font-size: 15px;
+          background-color: transparent;
 
+        div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 8px;
+          cursor: pointer;
+          padding: 16px ;
+          border-radius: 999px;
+          height: 100%;
+          width: 100%;
+          }
+          .btn-face-white {
+              color: rgb(51, 51, 51);
+              background: white; 
+          }
+
+          .btn-face-purple {
+              color: rgb(243, 243, 243);
+              background: rgb(206, 11, 164);
+              display: none;
+          }
+
+                &:hover {
+
+                  .btn-face-white {
+                    display: none;
+                  }
+                  .btn-face-purple {
+                    display: flex;
+                  }
+                }
+       }
 }
 
- 
-  h1 {
-    color: $color-primary;
-  }
-}
-
-@keyframes appear {
-  from {
-  }
-
-  to {
-  }
-}
