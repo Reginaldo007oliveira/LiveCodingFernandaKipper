@@ -4,6 +4,43 @@
   margin: 0 auto;
   padding: 0;
 }
+@keyframes balance { 
+0% {
+  transform: rotate(890deg);
+}
+100% {
+  transform: rotate(10deg);
+}
+}
+@keyframes balance2 { 
+  0% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+  }
+@keyframes wobble {
+  0% { transform: translateX(0%); }
+  15% { transform: translateX(-25%) rotate(-5deg); }
+  30% { transform: translateX(20%) rotate(3deg); }
+  45% { transform: translateX(-15%) rotate(-3deg); }
+  60% { transform: translateX(10%) rotate(2deg); }
+  75% { transform: translateX(-5%) rotate(-1deg); }
+  100% { transform: translateX(0%); }
+}
+
+@keyframes gelatine {
+  from, to { transform: scale(1, 1); }
+  25% { transform: scale(0.9, 1.1); }
+  50% { transform: scale(1.1, 0.9); }
+  75% { transform: scale(0.95, 1.05); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
 //from .. estado que ele está .. to .. estado que ele vai
 @keyframes appear {
   0% {
@@ -91,7 +128,7 @@ main {
           z-index: 999;
           position: absolute;
           top: 0;              
-          color: white;
+          
       }
             &:hover {
 
@@ -101,7 +138,7 @@ main {
                 border: none;
                 color: white;
                
-                animation: appear 300ms linear 180ms forwards;
+                animation: appear 200ms linear 10ms forwards;
               }
             }
        }
@@ -116,38 +153,74 @@ main {
         gap: 30px;
         margin-top: 200px;
         flex-grow: 1;
+        padding: 32px;
 
-        h1 {
-          font-size: 56px;
-          color: #df1;
+        .heading-container{
+         display: flex; 
+         justify-content: center;
+         flex-direction: column;
+
+         :first-child {
+          align-self: flex-end;
+          font-size: 7rem;
+          color: #0ee757;
+          max-height: 150px; 
+          margin-left: 409px;
+      }
+
+         h2 {
+          font-size: 8rem;
+          color: rgb(192, 189, 188);
+          font-weight: 800;
+          align-self: flex-start;
         }
+      }
      
 
       .bubble {
-        background-color: rgba(87, 110, 106, 0.4431372549);
+        // background-color: rgba(87, 110, 106, 0.4431372549);
         border-radius: 999px;
         font-size: 163px;
         padding: 30px;
+        justify-content: center;
         position: absolute;
 
         &.naves {
-          top: 30%;
-          margin-left: 1116px;
+          top: 47%;
+          margin-left: 1176px;
           font-size: 100px;
-          transform: rotate(13deg);
+          // transform: rotate(14deg);
+          // animation: wobble 2s ease infinite;
+           animation: balance 14s alternate 8ms infinite;
+          
+         
+         
           
         }
         &.disco {
-          top: 63%;
-          right: 50%;
+          top: 22%;
+          right: 64%;
           margin-left: 1px;
           transform: rotate(20deg);
+          animation: gelatine 4.5s infinite;
+         
         }
         &.bora {
-          top: 10%;
-          margin-left: -651px;
+          top: 41%;
+          margin-left: -1228px;
           font-size: 56px;
-          transform: rotate(30deg);
+          transform: rotate(307deg);
+          animation: balance2 500ms alternate 1ms infinite;
+          // animation: spin 10s infinite linear;
+        
+        }
+        &.duende {
+          top: 35%;
+          margin-left: -973px;
+          font-size: 90px;
+          transform: rotate(7deg);
+          animation: balance2 500ms alternate 1ms infinite;
+        
         }
 
         }

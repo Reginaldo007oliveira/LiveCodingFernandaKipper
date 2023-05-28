@@ -25,10 +25,15 @@ function App() {
         </button>
       </header>
       <div className="content-container">
-        <h1>Les grow your social presence</h1>
+        <div className="heading-container">
+           <h2> Les grow your </h2>
+           <h2> Social presence</h2>
+        </div>
+       
         <div className="bubble naves">🚀</div>
         <div className="bubble disco">🛸</div>
         <div className="bubble bora">🛸</div>
+        <div className="bubble duende">🛸</div>
         
       </div>
     </main>
