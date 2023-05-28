@@ -27,7 +27,7 @@ function App() {
       <div className="content-container">
         <div className="heading-container">
            <h2> Les grow your </h2>
-           <h2> Social presence</h2>
+           <h2> social presence.</h2>
         </div>
        
         <div className="bubble naves">🚀</div>
