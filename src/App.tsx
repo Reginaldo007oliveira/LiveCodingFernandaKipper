@@ -24,7 +24,13 @@ function App() {
              </div>       
         </button>
       </header>
-      <div className="content-content"></div>
+      <div className="content-container">
+        <h1>Les grow your social presence</h1>
+        <div className="bubble naves">🚀</div>
+        <div className="bubble disco">🛸</div>
+        <div className="bubble bora">🛸</div>
+        
+      </div>
     </main>
   )
 }

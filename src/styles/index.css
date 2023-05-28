@@ -3,7 +3,7 @@
 
   color-scheme: light dark;
   color: rgba(212, 241, 205, 0.87);
-  background-color: #242424;
+  background: #FFFFFF url("../assets/images/fundo.png.jpg") no-repeat right top fixed;
 }
 
 * {
